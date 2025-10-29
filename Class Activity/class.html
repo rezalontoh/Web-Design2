@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Peserta</title>
+</head>
+<body>
+    <h1>
+        Formulir Pendaftaran Peserta Workshop Web Development
+    </h1>
+
+    <form>
+        <fieldset>
+            <legend>Data Diri</legend>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" /><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" /><br /><br />
+
+            <label for="usia">Usia:</label>
+            <input type="usia" id="usia" name="usia" /><br /><br />
+
+            <label for="nomorhp">Nomor HP:</label>
+            <input type="nomorhp" id="nomorhp" name="nomorhp" /><br /><br />
+        </fieldset>
+
+        <fieldset>
+            <legend>Pilihan Workshop</legend>
+
+            Jenis Workshop:
+            <input type="radio" name="JW" value="frontend" />FrontEnd
+            <input type="radio" name="JW" value="backend" />BackEnd
+            <input type="radio" name="JW" value="fullstack" />FullStack <br />
+
+            Hari Keikutsertaan:
+            <input type="checkbox" name="Hari Keikutsertaan" />Hari 1
+            <input type="checkbox" name="Hari Keikutsertaan" />Hari 2
+            <input type="checkbox" name="Hari Keikutsertaan" />Hari 3 <br />
+        </fieldset>
+
+        <label for="pilih kota lokasi">Pilih Kota Lokasi</label>
+        <select id="pilih kota lokasi" name="pilih kota lokasi">
+        <optgroup label="Jawa">
+            <option value="jk">Jakarta</option>
+            <option value="bd">Bandung</option>
+            <option value="sby">Surabaya</option>
+        </optgroup>
+        <optgroup label="Luar Jawa">
+            <option value="mdn">Medan</option>
+            <option value="mksr">Makassar</option>
+            <option value="blkppan">Balikpapan</option> <br />
+        </optgroup>
+    </select><br /><br />
+
+    <label for="pesan">Alasan Mengikuti Workshop:</label>
+    <textarea name="pesan" rows="4" cols="10"></textarea><br />
+
+    <label for="upload">Kuota Terisi:</label>
+    <progress id="upload" value="50" max="100">50%</progress><br><br>
+
+    <p>Tingkat Penguasaan HTML:</p>
+    <meter value="7" min="0" max="10">10%</meter><br><br>
+
+    <form oninput="total.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" value="10"> +
+        <input type="number" id="b" value="20"> =
+        <output name="total" for="a b"></output>
+    </form><br>
+
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

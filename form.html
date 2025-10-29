@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Form</title>
+    <script>
+        function tampilkanSemua() {
+            // Ambil data dari input
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            // Radio (Jenis Kelamin)
+            let jk = document.querySelector('input[name="JK"]:checked');
+            jk = jk ? jk.value : "Belum dipilih";
+
+            // Checkbox (Hobi)
+            let hobiList = document.querySelectorAll('input[name="hobi"]:checked');
+            let hobi = [];
+            hobiList.forEach(item => hobi.push(item.value));
+
+            // Textarea
+            let pesan = document.querySelector('textarea[name="pesan"]').value;
+
+            // Browser
+            let browser = document.getElementById("browser").value;
+
+            // Jurusan
+            let jurusan = document.getElementById("jurusan").value;
+
+            // Hitung otomatis
+            let a = parseInt(document.getElementById("a").value) || 0;
+            let b = parseInt(document.getElementById("b").value) || 0;
+            let total = a + b;
+
+            // Tampilkan ke output
+            document.getElementById("hasilSemua").value =
+                "Nama: " + nama + "\n" +
+                "Email: " + email + "\n" +
+                "Password: " + password + "\n" +
+                "Jenis Kelamin: " + jk + "\n" +
+                "Hobi: " + (hobi.length > 0 ? hobi.join(", ") : "Belum dipilih") + "\n" +
+                "Pesan: " + pesan + "\n" +
+                "Browser: " + browser + "\n" +
+                "Jurusan: " + jurusan + "\n" +
+                "Hasil Hitung (a+b): " + total;
+        }
+    </script>
+</head>
+<body>
+    <h1><b><i>Suara Rakyat Portal Berita Terbaru dan Terupdate</i></b></h1>
+    
+    <form oninput="tampilkanSemua()">
+        <fieldset>
+            <legend>Form Registrasi</legend>
+
+            <!-- INPUT NAMA -->
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <!-- INPUT EMAIL -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- INPUT PASSWORD -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <!-- RADIO -->
+            Jenis Kelamin:
+            <input type="radio" name="JK" value="Laki - laki">Laki - laki 
+            <input type="radio" name="JK" value="Perempuan">Perempuan <br><br>
+
+            <!-- CHECKBOX -->
+            Hobi:
+            <input type="checkbox" name="hobi" value="Membaca">Membaca
+            <input type="checkbox" name="hobi" value="Menulis">Menulis
+            <input type="checkbox" name="hobi" value="Mabo">Mabo <br><br>
+
+            <!-- TEXTAREA -->
+            <label for="pesan">Pesan:</label><br>
+            <textarea name="pesan" rows="4" cols="30"></textarea><br><br>
+
+            <!-- DATALIST -->
+            <label for="browser">Pilih Browser Favorit:</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+                <option value="Google Chrome">
+                <option value="Mozilla Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Microsoft Edge">
+            </datalist><br><br>
+
+            <!-- SELECT + OPTGROUP + OPTION -->
+            <label for="jurusan">Pilih Jurusan:</label>
+            <select id="jurusan" name="jurusan">
+                <optgroup label="Komputer">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                </optgroup>
+                <optgroup label="Lainnya">
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Data Science">Data Science</option>
+                </optgroup>
+            </select><br><br>
+
+            <!-- HITUNG OTOMATIS -->
+            <p>Hitung otomatis:</p>
+            <input type="number" id="a" value="10"> +
+            <input type="number" id="b" value="20"> =
+            <output name="total" for="a b"></output><br><br>
+
+            <!-- METER -->
+            <p>Tingkat Baterai Laptop:</p>
+            <meter value="0.6" min="0" max="1">60%</meter><br><br>
+
+            <!-- PROGRESS -->
+            <label for="upload">Progress Upload:</label>
+            <progress id="upload" value="40" max="100">40%</progress><br><br>
+
+            <!-- OUTPUT SEMUA -->
+            <p><b>Output Semua Data:</b></p>
+            <output id="hasilSemua" style="white-space: pre-line; border:1px solid black; padding:5px; display:block; width:300px; height:200px;"></output><br><br>
+
+            <!-- BUTTON -->
+            <button type="submit">Kirim</button>
+        </fieldset>
+    </form>
+    
+    <br>
+    <a href="index.html">Pergi ke Halaman Utama</a>
+    <a href="table.html">Pergi ke Halaman Table</a>
+</body>
+</html>

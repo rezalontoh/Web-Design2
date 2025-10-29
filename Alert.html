@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device">
+        <title>Contoh Alert JavaScript</title>
+    </head>
+    <body>
+        <h1>Contoh Pop-up Alert dengan JavaScript</h1>
+        <button onclick="Konfirmasi()">Klik untuk Konfirmasi</button>
+        <button onclick="tombol2()">Reset</button>
+        <p id="head"></p>
+
+        <script>
+            function tombol2(){
+                alert("Tekan aku bang")
+                let jawaban = tekan ("apakah anda yakin menekan ini?")
+                if (jawaban === true) {
+                    document.getElementById("Reset").innerHTML
+                }
+            }
+        </script>
+        <script>
+            function Konfirmasi() {
+                alert("Helo! Ini adalah pesan Pop-up")
+                let jawaban = confirm ("Apakah anda yakin ingin melanjutkan?")
+                if (jawaban === true ) {
+                    document.getElementById("Hasil").textContent
+                }
+            }
+        </script>
+    </body>
+</html>

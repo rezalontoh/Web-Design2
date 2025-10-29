@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/image/saboru.jpg">
+    <title>Formulir Pendaftaran Workshop HTML (UJIAN PRAKTEK WEB DESIGN)</title>
+
+    <!-- CSS Langsung di dalam HTML-->
+    <style>
+        /* Styling umum */
+        body {
+            background-color: rgb(109, 80, 80);
+            
+            margin: 8;
+            padding: 20px;
+        }
+    
+        /* Judul */
+        .judul {
+            color: rgb(248, 4, 4);
+            text-align: center;
+            font-size: 32px;
+            text-indent: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 3;
+            text-decoration: underline;
+            font-weight: bold;
+        } 
+
+        /* deskripsi */
+        .deskripsi {
+            color: rgb(255, 238, 0);
+            text-align: center;
+            font-size: 32px;
+        }
+
+        /* Paragraf */
+        .Paragraf {
+            text-indent: 25px;
+            font-family:Verdana,Tahoma, sans-serif;
+            font-size: medium;
+            line-height: 1,6;
+        }
+    </style>
+</head>
+
+<class>
+
+    <h1 class="judul"><b>Formulir Pendaftaran Workshop HTML (UJIAN PRAKTEK WEB DESIGN)</b></h1>
+    <p class="deskripsi">Workshop ini ditujukan untuk merperkenalkan dasar dasar HTML hingga pembuatan form. Silahkan isi formulir di bawah ini untuk mendaftar sebagai peserta.</p> 
+
+</class>
+    <img src="assets/image/saboru.jpg" alt="Foto" width="650"> <br /><br />
+    <a class="judul" href="tentang.html">tentang</a>
+    <a class="deskripsi" href="kontak.html">kontak</a> <br />
+
+    <h2 class="judul">Jadwal Workshop</h2>
+    <table border = "2">
+        <tr>
+            <th>Tanggal</th>
+            <th>Waktu</th>
+            <th>Materi</th>
+        </tr>
+        <tr>
+            <td>1 September 2025</td>
+            <td>09.00 - 11.00</td>
+            <td>Pengenalan HTML</td>
+        </tr>
+        <tr>
+            <td>2 September 2025</td>
+            <td>09.00 - 11.00</td>
+            <td>HTML Lanjutan</td>
+        </tr>
+        <tr>
+            <td>3 September</td>
+            <td>09.00 - 11.00</td>
+            <td>Praktik Form</td>
+        </tr>
+
+    </table>
+
+    <form>
+        <fieldset>
+            <legend>Data Peserta</legend>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" /><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" /><br /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /><br /><br />
+
+            Jenis Kelamin:
+            <input type="radio" name="JK" value="Laki - laki">Laki - laki 
+            <input type="radio" name="JK" value="Perempuan">Perempuan <br><br>
+
+        <p>
+            Pilih Materi Tambahan: <br /><br />
+            <input type="radio" name="PM" value="pilih materi tambahan">Materi Lanjutan <br /><br />
+            <input type="radio" name="PM" value="sertifikat">Sertifikat
+        </p>
+
+        <label for="Kota">Pilih Kota:</label>
+            <select id="kota" name="kota">
+                <optgroup label="Kota">
+                    <option value="jakarta">Jakarta</option>
+                    <option value="makassar">Makassar</option>
+                </optgroup>
+                <optgroup label="Lainnya">
+                    <option value="jawa">Jawa</option>
+                    <option value="manado">Manado</option>
+                </optgroup><br><br />
+
+                <br>
+            <label for="mentor">Pilih Mentor:</label>
+                <input list="mentor" id="mentor" name="mentor">
+                <datalist id="mentor">
+                    <option value="Lontoh, Reza">
+                    <option value="Silitonga, Argha">
+                    <option value="Mokodaser, Wilson">
+                    <option value="Sondakh, Debby Erce">
+                    <option value="Pungus, Stenly">
+                </datalist><br><br>
+            </fieldset>
+        </form>
+
+</body>
+</html>

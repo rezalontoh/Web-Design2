@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+        header {
+            background-color: rgb(112, 32, 18);
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(116, 146, 136);
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: aliceblue;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: rgb(108, 111, 112);
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+            background-color: rgb(203, 206, 206);
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: rgb(179, 158, 125);
+        }
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+                }
+    </style>
+
+    </head>
+    <div>
+        <header>
+            <h1> Welcome to My Website</h1>
+            <p>This is a simple layout example.</p>
+        </header>
+        <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+        </nav>
+
+
+        <div class="container">
+        <div class="content">
+        <h2>Konten Utama</h2>
+        <p>Ini adalah area konten utama.</p>
+        <p>This is where the main content goes</p>
+    </div> 
+
+
+        <div class="sidebar">
+        <h3>Sidebar</h3>
+        <ul>
+            <li>Menu samping 1</li>
+            <li>Menu samping 2</li>
+            <li>Menu samping 3</li>
+        </ul>
+    </div> 
+</div>
+
+    
+        <footer> 
+            <p>&copy;2025 My Website</p>
+        </footer>
+
+
+        
+    

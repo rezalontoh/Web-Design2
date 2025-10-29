@@ -1,0 +1,194 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website Sederhana</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+        header {
+            background-color: rgb(40, 99, 62);
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(37, 37, 37);
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: aliceblue;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: rgb(108, 111, 112);
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+            background-color: rgb(182, 182, 182);
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: rgb(194, 190, 185);
+            
+       
+        }
+        .data-table {
+            padding: 20px;
+        }
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            border: 1px solid;
+        }
+        .data-table th, .data-table td
+        {
+            border: 1px solid;
+            padding: 8px;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+        }
+        .form {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-row label {
+            width: 150px;
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+
+        footer {
+            background-color: rgb(40, 99, 62);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+                }
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+            <p>Memuat gabungan antara HTML dan CSS</p>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </nav>
+        <div class="container">
+            <h2>Konten Utama</h2>
+            <p>Selamat datang di website latihan Web Design dengan gabungan antara HTML dan CSS</p>
+            <img src="assets/image/Universitas-Klabat1.jpg" alt="Foto" class="banner">
+            </div>
+            <div class="data-table"></div>
+            <h3>Tabel Data</h3>
+            <table >
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Kota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Andi</td>
+                        <td>Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Andi</td>
+                        <td>Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Budi</td>
+                        <td>Bandung</td>
+                    <tr>
+                        <td>3</td>
+                        <td>Wilsen</td>
+                        <td>Manado</td>
+                    </tr>
+                </tbody>
+            </table>
+                            
+        </div>
+        <div class="sidebar">
+       <h3>Tentang Website</h3>
+       <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi.</p>
+       <br>
+       <ul>
+           <h3>Menu Sidebar</h3>
+           <li><a href="#">Beranda</a></li>
+           <li><a href="#">Tentang</a></li>
+           <li><a href="#">Kontak</a></li>
+           <li><a href="#">Formulir</a></li>
+       </ul>
+   </div> 
+</div>
+
+        <h3>Formulir</h3>
+        <fieldset>
+            <legend>Data Peserta</legend>
+            <label for="nama">Nama:</label><br>
+                <input type="text" id="nama" name="nama"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="kota">Pilih Kota:</label><br>
+                <select id="kota" name="kota">
+                    <option value="jakarta">Jakarta</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="manado">Manado</option>
+                    </select>
+
+                    <input type="checkbox" id="syarat" name="syarat">
+                    <label for="syarat">Saya setuju dengan syarat & ketentuan</label><br><br>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Website Latihan</p>
+        </footer>
+    </body>
+    </html>
